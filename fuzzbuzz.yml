@@ -1,4 +1,3 @@
-base: ubuntu:16.04
 language: c++
 engine: libFuzzer
 environment:
