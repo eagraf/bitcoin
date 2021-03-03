@@ -8,5 +8,5 @@ base:
   steps:
     - run: ./autogen.sh
     - run: ./configure --enable-fuzz --with-sanitizers=address,fuzzer,undefined --enable-danger-fuzz-link-all --disable-dependency-tracking
-    - run: make
+    - run: make -j8
  
