@@ -9,5 +9,4 @@ base:
     - run: ./autogen.sh
     - run: ./configure --enable-fuzz --with-sanitizers=address,fuzzer,undefined --enable-danger-fuzz-link-all --disable-dependency-tracking
     - run: make
-    - run: git clone https://github.com/bitcoin-core/qa-assets
  
