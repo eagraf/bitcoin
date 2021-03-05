@@ -9,4 +9,5 @@ base:
     - run: ./autogen.sh
     - run: CC=clang CXX=clang++ ./configure --enable-fuzz --with-sanitizers=address,fuzzer,undefined --enable-danger-fuzz-link-all --disable-dependency-tracking
     - run: make -j8
-    - run: rm /out/!("addition_overflow"|"addrdb"|"address_deserialize"|"addrman"|"addr_info_deserialize")
+    - run: shopt -s extglob
+    - run: rm /out/!("fuzz"|"addition_overflow"|"addrdb"|"address_deserialize"|"addrman"|"addr_info_deserialize")
