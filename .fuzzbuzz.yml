@@ -9,4 +9,4 @@ base:
     - run: ./autogen.sh
     - run: CC=clang CXX=clang++ ./configure --enable-fuzz --with-sanitizers=address,fuzzer,undefined --enable-danger-fuzz-link-all --disable-dependency-tracking
     - run: make -j8
-    - run: find /out -type f -not -name "fuzz" -not -name "addition_overflow" -not -name "addrdb" -not -name "addrman" -not -name "address_deserialize" -delete
+    - run: find src/test/fuzz -type f -not -name "fuzz" -not -name "addition_overflow" -not -name "addrdb" -not -name "addrman" -not -name "address_deserialize" -delete
